@@ -4,15 +4,15 @@
 //   - JS Objects that are the outcome of an asynchronous operation
 //   - Can have one of three states:
 //      - Pending = initial state.Operation not completed
-//      - Fulfilled = operation has completed
-//      - Rejected = operation has failed(error)
+//      - Fulfilled = operation has completed (Settled)
+//      - Rejected = operation has failed(error) (Settled)
 //   - Settled = promise is no longer pending (fulfilled or rejected)
 
 
 // *****************************************************************************
-// 2) new Promise( executor )
+// 2) new Promise( executor )   => Promise Object
 // - executor function is run when promise is created
-// - exeucotor usually starts an asynch operation (ex. get data from external 
+// - executor usually starts an asynch operation (ex. get data from external 
 //   database, or api to fetch data)
 // - executor automatically passed in resolve() and reject() functions
 // - resolve() = changes promise's status from pending to fulfilled. 
@@ -55,16 +55,18 @@ const myFirstPromise = new Promise(executorFunction);
 
 
 // *****************************************************************************
-// 4) ___.then( onFulfilled, onRejected )
-// - ___ = promise object
-// - onFulfilled = call back that runs if promise settles to fulfilled (optional)
+// 4) PromiseObj.then( onFulfilled, onRejected )  => PromiseObj
+// Parameters:
+// - PromiseObj = Promise Object
+// - onFulfilled = optional callback that runs if promise settles to fulfilled
 //      - this CB automatically takes in the resolvedValue of the promise
-// - onRejected = callback that runs if promise settles to rejected (optional)
+// - onRejected = optional callback that runs if promise settles to rejected 
 //      - this CB automatically takes in the rejectedReason of the promise
-// - returns a settled promise
-// - Returns a promise with same settled value as the promise it was called on 
-//   if no callbacks provided
-// - can chain resolved logic from rejected logic
+// Returns:
+// - a settled promise
+//   - a promise with same settled value as the promise it was called on 
+//     if no callbacks provided
+//   - can chain resolved logic from rejected logic
 //
 // Example 1:
 
