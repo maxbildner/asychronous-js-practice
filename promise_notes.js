@@ -42,6 +42,7 @@ let p = new Promise((resolve, reject) => {
 })
 
 
+
 // *****************************************************************************
 // 3) JS Promise.then( onFulfilled, onRejected )    => Settled JS Promise
 //    - onFulfilled(value) = optional cb that's run if promise Resolves
