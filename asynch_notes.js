@@ -58,9 +58,9 @@ const myFirstPromise = new Promise(executorFunction);
 // 4) PromiseObj.then( onFulfilled, onRejected )  => PromiseObj
 // Parameters:
 // - PromiseObj = Promise Object
-// - onFulfilled = optional callback that runs if promise settles to fulfilled
+// - onFulfilled = optional callback that runs if promise settles to Fulfilled
 //      - this CB automatically takes in the resolvedValue of the promise
-// - onRejected = optional callback that runs if promise settles to rejected 
+// - onRejected = optional callback that runs if promise settles to Rejected 
 //      - this CB automatically takes in the rejectedReason of the promise
 // Returns:
 // - a settled promise
